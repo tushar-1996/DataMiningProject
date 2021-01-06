@@ -1,0 +1,116 @@
+Model 1: (spatial dropout=0.4, lstm(dropout=0.4, recurrent dropout=0.4, glove.twitter.27B.200d.txt, batch_size=1000)
+Model: "sequential_13"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_14 (Embedding)     (None, 41, 200)           8508200   
+_________________________________________________________________
+spatial_dropout1d_11 (Spatia (None, 41, 200)           0         
+_________________________________________________________________
+bidirectional_13 (Bidirectio (None, 400)               641600    
+_________________________________________________________________
+dense_13 (Dense)             (None, 3)                 1203      
+=================================================================
+Total params: 9,151,003
+Trainable params: 9,151,003
+Non-trainable params: 0
+_________________________________________________________________
+
+loss: 0.6420 - categorical_accuracy: 0.7231 - precision: 0.7504 - recall: 0.6786 - f1_metrics: 0.7127 - val_loss: 0.7647 - val_categorical_accuracy: 0.6733 - val_precision: 0.6896 - val_recall: 0.6504 - val_f1_metrics: 0.6754
+
+
+
+Model 2: (spatial dropout=0.6, lstm(dropout=0.6, recurrent dropout=0.6, glove.twitter.27B.200d.txt, batch_size=2000)
+
+Model: "sequential_2"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_2 (Embedding)      (None, 41, 200)           8508200   
+_________________________________________________________________
+spatial_dropout1d_2 (Spatial (None, 41, 200)           0         
+_________________________________________________________________
+bidirectional_2 (Bidirection (None, 400)               641600    
+_________________________________________________________________
+dense_2 (Dense)              (None, 3)                 1203      
+=================================================================
+Total params: 9,151,003
+Trainable params: 9,151,003
+Non-trainable params: 0
+_________________________________________________________________
+
+loss: 0.7206 - categorical_accuracy: 0.6719 - precision: 0.7072 - recall: 0.6133 - f1_metrics: 0.6569 - val_loss: 0.7764 - val_categorical_accuracy: 0.6637 - val_precision: 0.6771 - val_recall: 0.6400 - val_f1_metrics: 0.6648
+
+
+Model 3: (spatial dropout=0.7, lstm(dropout=0.7, recurrent dropout=0.7, glove.twitter.27B.200d.txt, batch_size=2000)
+
+Model: "sequential_11"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_12 (Embedding)     (None, 41, 200)           8508200   
+_________________________________________________________________
+spatial_dropout1d_9 (Spatial (None, 41, 200)           0         
+_________________________________________________________________
+bidirectional_11 (Bidirectio (None, 400)               641600    
+_________________________________________________________________
+dense_11 (Dense)             (None, 3)                 1203      
+=================================================================
+Total params: 9,151,003
+Trainable params: 9,151,003
+Non-trainable params: 0
+_________________________________________________________________
+
+loss: 0.7715 - categorical_accuracy: 0.6446 - precision: 0.6835 - recall: 0.5744 - f1_metrics: 0.6242 - val_loss: 0.7811 - val_categorical_accuracy: 0.6566 - val_precision: 0.6724 - val_recall: 0.6266 - val_f1_metrics: 0.6503
+
+Model 4: (dropout=0.5, glove.twitter.27B.200d.txt, batch_size=2000)
+
+Model: "sequential_15"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_16 (Embedding)     (None, 41, 200)           8508200   
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 41, 200)           0         
+_________________________________________________________________
+bidirectional_15 (Bidirectio (None, 400)               641600    
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 400)               0         
+_________________________________________________________________
+dense_15 (Dense)             (None, 20)                8020      
+_________________________________________________________________
+dropout_5 (Dropout)          (None, 20)                0         
+_________________________________________________________________
+dense_16 (Dense)             (None, 3)                 63        
+=================================================================
+Total params: 9,157,883
+Trainable params: 9,157,883
+Non-trainable params: 0
+_________________________________________________________________
+
+
+loss: 0.7049 - categorical_accuracy: 0.6977 - precision: 0.7494 - recall: 0.6032 - f1_metrics: 0.6683 - val_loss: 0.7531 - val_categorical_accuracy: 0.6690 - val_precision: 0.6983 - val_recall: 0.6115 - val_f1_metrics: 0.6613
+
+
+Model 5: (lstm(dropout=0.5, recurrent_dropout=0.3) dropout=0.5, glove.twitter.27B.200d.txt, batch_size=2000)
+
+Model: "sequential_16"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_17 (Embedding)     (None, 41, 200)           8508200   
+_________________________________________________________________
+bidirectional_16 (Bidirectio (None, 400)               641600    
+_________________________________________________________________
+dense_17 (Dense)             (None, 10)                4010      
+_________________________________________________________________
+dropout_6 (Dropout)          (None, 10)                0         
+_________________________________________________________________
+dense_18 (Dense)             (None, 3)                 33        
+=================================================================
+Total params: 9,153,843
+Trainable params: 9,153,843
+Non-trainable params: 0
+_________________________________________________________________
+
+loss: 0.6800 - categorical_accuracy: 0.7121 - precision: 0.7878 - recall: 0.5907 - f1_metrics: 0.6751 - val_loss: 0.7747 - val_categorical_accuracy: 0.6626 - val_precision: 0.7017 - val_recall: 0.5411 - val_f1_metrics: 0.6174
