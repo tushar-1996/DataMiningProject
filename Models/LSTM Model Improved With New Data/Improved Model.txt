@@ -1,0 +1,19 @@
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding (Embedding)        (None, 39, 200)           14691200  
+_________________________________________________________________
+spatial_dropout1d (SpatialDr (None, 39, 200)           0         
+_________________________________________________________________
+bidirectional (Bidirectional (None, 400)               641600    
+_________________________________________________________________
+dense (Dense)                (None, 3)                 1203      
+=================================================================
+Total params: 15,334,003
+Trainable params: 15,334,003
+Non-trainable params: 0
+_________________________________________________________________
+
+Results:
+loss: 0.5632 - categorical_accuracy: 0.7590 - precision: 0.7826 - recall: 0.7258 - f1_metrics: 0.7531 - val_loss: 0.6396 - val_categorical_accuracy: 0.7310 - val_precision: 0.7440 - val_recall: 0.7173 - val_f1_metrics: 0.7330
