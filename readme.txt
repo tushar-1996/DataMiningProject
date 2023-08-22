@@ -1,4 +1,6 @@
-Google colab has been used for the execution of this project. Please ensure the following folder structure in google drive:
+- Sentiment analysis on the Twitter tweets dataset based on three sentiments: Neutral, Positive, and Negative.
+- Compared Stacking Predictions and Stacking Generalization ensembles with strong traditional architectures like flat CNN and LSTM.
+- Achieved a performance boost in terms of the F1 score. 
 
 SentimentAnalysis
  - GloVe
